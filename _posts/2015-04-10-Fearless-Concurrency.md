@@ -77,14 +77,14 @@ destroyed at that point.
 Let's look at some simple examples. Suppose we create a vector and
 push some elements onto it:
 
-~~~~rust
+```rust
 fn make_vec() {
     let mut vec = Vec::new(); // owned by make_vec's scope
     vec.push(0);
     vec.push(1);
     // scope ends, `vec` is destroyed
 }
-~~~~
+```
 
 The scope that creates a value also initially owns it. In this case,
 the body of `make_vec` is the owning scope for `vec`. The owner can do
